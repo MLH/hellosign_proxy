@@ -1,0 +1,23 @@
+{
+  "name": "hellosign_proxy",
+  "version": "1.0.0",
+  "description": "This is a proxy between HelloSign's webhooks and Zapier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MLH/hellosign_proxy.git"
+  },
+  "author": "Swift <swift@mlh.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MLH/hellosign_proxy/issues"
+  },
+  "homepage": "https://github.com/MLH/hellosign_proxy#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "requests": "^0.1.7"
+  }
+}
