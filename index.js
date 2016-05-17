@@ -28,7 +28,7 @@ app.post('/*', multer.single(), function (req, res) {
     return res.status(500).send('Malformed JSON body.');
   }
 
-  util.log('POST %s: Received `%s` Event', urlPath, event.type);
+  util.log('POST %s: Received `%s` Event', urlPath, event.event);
 
   request.post(zapierUrl, { json: event }, function(err, response, body) {
     util.log('POST %s (%s): %s', urlPath, response.statusCode, JSON.stringify(body));
