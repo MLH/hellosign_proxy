@@ -1,13 +1,8 @@
 var express = require('express')
   , request = require('request')
   , util = require('util')
-  , zapierUrl = process.env.ZAPIER_WEBHOOK
   , port = process.env.PORT || 3000
   , app = express();
-
-if(!zapierUrl) {
-  throw Error('Missing Zapier Webhook URL. Please set `ZAPIER_WEBHOOK` Env Variable.');
-}
 
 app.post('/*', function (req, res) {
   var ua = req.get('User-Agent')
@@ -37,6 +32,5 @@ app.post('/*', function (req, res) {
 });
 
 app.listen(port, function () {
-  util.log('Proxying to `%s` on port 3000.', zapierUrl);
+  util.log('Proxying on port %s.', port);
 });
-
