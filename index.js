@@ -95,7 +95,7 @@ function eventFromRequestBody(rawBody) {
       id: sigID,
       name: signature.signer_name,
       email: signature.signer_email_address,
-      signed_at: signature.signed_at,
+      signed_at: new Date(signature.signed_at * 1000).toISOString(),
       last_viewed_at: signature.last_viewed_at
     };
 
